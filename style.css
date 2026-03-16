@@ -1,0 +1,92 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.one {
+    background-color: #13365D;
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.two {
+    background-color: #0D8488;
+    height: 17.5vw;
+}
+.three {
+    background-color: #4D113E;
+    height: 10vw;
+}
+
+.words {
+    border: 0px solid #ddd;
+    height: 50px;
+    line-height: 50px;
+    font-size: 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.words span {
+    position: relative;
+    color: #000;
+    animation: animation 10s ease infinite;
+}
+
+@keyframes animation {
+    0%,
+    100% { top: 0; }
+    20% { top: 0; }
+    25% { top: -50px; }
+    45% { top: -50px; }
+    50% { top: -100px; }
+    70% { top: -100px; }
+    75% { top: -150px; }
+    95% { top: -150px; }
+
+}
+
+.carousel {
+    margin: 100px auto;
+    border: 0.5vw solid #0D8488;
+    display: flex;
+    overflow-x: auto;
+    gap: 1vw;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1vw;
+    animation: spin 10s infinite linear;
+    gap: 1vw;
+    padding-right: 0vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+}
+
+.card {
+    height: 16vw;
+    width: 16vw;
+    background: #4D113E;
+    font-size: 3vw;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
