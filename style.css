@@ -6,6 +6,49 @@ body {
     padding: 0;
 }
 
+p {
+    font-family: poppins;
+    font-style: italic;
+    font-weight: 550;
+    color: #000000;
+    font-size: 3vh;
+}
+
+h1 {
+
+    font-family: poppins;
+    font-style: italic;
+    font-weight: 550;
+    color: #fff;
+    font-size: 6vh;
+    margin: 0;
+}
+
+.topnav {
+    position: sticky;
+    top: 0;
+    margin: 0;
+}
+
+.topnav a + a {
+    border-left: 1px solid #fff;
+    padding-left: 5px;
+}
+
+.title {
+    background-color: #4D113E;
+    height: 14vh;
+    width: 100%;
+    line-height: 14vh;
+}
+
+.links {
+    background-color: #0D8488;
+    height: 6vh;
+    width: 100%;
+    line-height: 6vh;
+}
+
 .one {
     background-color: #13365D;
     height: 300vh;
@@ -17,11 +60,11 @@ body {
 
 .two {
     background-color: #0D8488;
-    height: 17.5vw;
+    height: 25.5vh;
 }
 .three {
     background-color: #4D113E;
-    height: 10vw;
+    height: 10vh;
 }
 
 .words {
@@ -54,10 +97,10 @@ body {
 
 .carousel {
     margin: 100px auto;
-    border: 0.5vw solid #0D8488;
+    border: 0.5vh solid #0D8488;
     display: flex;
     overflow-x: auto;
-    gap: 1vw;
+    gap: 1vh;
 }
 
 .carousel::-webkit-scrollbar {
@@ -68,24 +111,63 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1vw;
-    animation: spin 10s infinite linear;
-    gap: 1vw;
-    padding-right: 0vw;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+    margin-right: 1vh;
+    animation: spin 14s infinite linear;
+    gap: 1vh;
+    padding-right: 0vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .card {
-    height: 16vw;
-    width: 16vw;
+    width: 24vh;
+    height: 24vh;
+    flex: 0 0 auto;
     background: #4D113E;
-    font-size: 3vw;
-    border-radius: .2em;
+    font-size: 3vh;
+    border-radius: 10px;
     text-align: center;
     align-content: center;
+    cursor: pointer;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    transition: 2s;
+}
+
+.card img {
+    width: 16vh;
+    height: auto;
+}
+
+.card img, .card h3, .card p {
+    margin: 1vh;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+/*box sizing*/
+@media (max-width:900px) and (min-width: 601px) {
+    .card {
+        height: 24vh;
+        width: 24vh;
+    }
+}
+@media (max-width:600px) {
+    .card {
+        height: 16vh;
+        width: 16vh;
+    }
+}
 @keyframes spin {
     from {translate: 0;}
     to {translate: -100%;}
